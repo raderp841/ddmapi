@@ -24,7 +24,7 @@ import com.example.restservice.models.Item;
 
 @RestController 
 public class ItemsController {
-	@CrossOrigin(origins = "https://raderp841.github.io/ddmReact/")
+	@CrossOrigin(origins = "https://raderp841.github.io")
 	@RequestMapping("/getItems")
 	public List<Item> getItems()   
 	{  
