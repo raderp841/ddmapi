@@ -32,6 +32,10 @@ public class UserController {
 				
 				user = new User(id, uName);
 			}
+			
+			if(user != null && user.getId() > 0) {
+				statement.execute("update userinfo set lastOn= now() where id =" + user.getId());
+			}
 		
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
