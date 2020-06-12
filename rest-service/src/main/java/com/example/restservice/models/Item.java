@@ -5,9 +5,26 @@ public class Item {
 	private String name;
 	private double price;
 	private String imgPath;
+	private int userItemId;
 	
 	public Item() {
 		
+	}
+	
+	public Item(int id, String name, double price, String imgPath) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.imgPath = imgPath;
+		this.setUserItemId(-1);
+	}
+	
+	public Item(int id, String name, double price, String imgPath, int userItemId) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.imgPath = imgPath;
+		this.setUserItemId(userItemId);
 	}
 
 	public int getId() {
@@ -40,5 +57,13 @@ public class Item {
 
 	public void setImgPath(String imgPath) {
 		this.imgPath = imgPath;
+	}
+
+	public int getUserItemId() {
+		return userItemId;
+	}
+
+	public void setUserItemId(int userItemId) {
+		this.userItemId = userItemId;
 	}
 }
